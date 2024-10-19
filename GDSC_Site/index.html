@@ -6,118 +6,73 @@
     <title>GDSC Home Page Dypcoe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Optional: Add transition for smooth mode change */
         body {
             transition: background-color 0.5s, color 0.5s;
         }
         .dark {
-            background-color: #1a202c; /* Dark background */
-            color: #f7fafc; /* Light text color */
+            background-color: #1a202c;
+            color: #f7fafc;
         }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-900">
-<div class="container">
-        <!-- navbar for site -->
-<header class="bg-dark shadow-lg z-90 fixed">
-    <nav class=" container mx-auto p-4  top-0 right-0 bg-dark z-90 fixed">
-        <div class="flex justify-between items-center">
-        
-        <div class="text-xl font-bold text-gray-800">
-            <a href="#"><img src="./components/Logo.png" alt="" srcset=""></a>
-        </div>
-        
-        <ul class="flex space-x-4 b pl-5 text-xs">
-            <li><a href="#" class="text-gray-600 hover:text-blue-600 w-32 h-32 rounded-full border-4 border-blue-500 animate-border-pulse p-3">Home</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-blue-600 w-32 h-32 rounded-full border-4 border-blue-500 animate-border-pulse p-3">Project</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-blue-600 w-32 h-32 rounded-full border-4 border-blue-500 animate-border-pulse p-3">Team</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-blue-600 w-32 h-32 rounded-full border-4 border-blue-500 animate-border-pulse p-3">Contact</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-blue-600 w-32 h-32 rounded-full border-4 border-blue-500 animate-border-pulse p-3">login</a></li>
-            <li>
-            <!-- for theme button -->
-            
-            
-            <!-- <span class="text-lg" id="theme-icon"></span> -->
-        </div></li>
-        </ul>
-        </div>
-    </nav>
+<body class="bg-white dark:bg-gray-900 pt-20">
+    <header class="bg-dark shadow-lg fixed w-full z-90">
+        <nav class="container mx-auto p-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold">
+                    <a href="#"><img src="./components/Logo.png" alt="Logo"></a>
+                </div>
+                <ul class="flex space-x-4 text-xs">
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Project</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Team</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Login</a></li>
+                    <li>
+                        <button id="theme-toggle" class="bg-gray-200 p-2 rounded-full">
+                            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-5.657l-.707.707M5.514 5.514l-.707.707M21 12h-1m-16 0H3m16.243 6.657l-.707.707M5.514 18.485l-.707.707M16.243 5.343l-.707.707M18.485 12l.707-.707" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <!-- hero section of the site -->
-
-    <div class="hero pt-16 z-0 block">
-        <div class="absolute h-full w-full bg-cover bg-center" style="background-image: url('./components/Group\ 306.png');">
-            <div class=" inset-0 bg-black opacity-20 z-0"></div> <!-- Optional overlay -->
-            <div class="flex items-center justify-center h-full z-0">
-                <div class="text-white text-center px-4">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Google Developers Student Club</h1>
-                    <p class="text-lg md:text-xl mb-8">D.Y.Patil College Of Engineering</p>
-                    <a href="#"
-                       class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 cursor-pointer">
-                       <button class="button btn cursor-pointer">Join community
-</button>
-                    </a>
-                </div>
+    <div class="hero min-h-screen bg-cover bg-center" style="background-image: url('./components/Group\ 306.png');">
+        <div class="inset-0 bg-black opacity-20"></div>
+        <div class="flex items-center justify-center h-full">
+            <div class="text-white text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Google Developers Student Club</h1>
+                <p class="text-lg md:text-xl mb-8">D.Y.Patil College Of Engineering</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full">Join community</a>
             </div>
         </div>
     </div>
 
-
-    <!-- gdsc info section -->
-    <div class="flex flex-col space-x-8 p-6" style="margin-top:800px;">
-
-
-        <!-- this is left side img -->
-        <div class="flex flex-row space-x-4 m-8 bg-slate-700 h-full w-full">
-
-            <div class="flex-2"><img src="./components/VwDf 1.png" alt="" srcset=""></div>
-            <div class="flex flex-col flex-1 p-7 ">
+    <!-- Sections -->
+    <div class="container mx-auto p-6">
+        <div class="flex flex-col md:flex-row space-x-4 m-8 bg-slate-700 p-6">
+            <img src="./components/VwDf 1.png" alt="" class="flex-2">
+            <div class="flex flex-col flex-1 space-y-4">
                 <h1><span class="text-green">Android</span> Development</h1>
-                <p>Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.</p>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CodeLabs <span class="button">-></span></button>
+                <p>Every year Google developers release exciting new updates...</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CodeLabs -></button>
             </div>
         </div>
-
-
-        
-
-        <!-- this is opp side img -->
-        <div class="flex flex-row space-x-4 m-8 bg-slate-700 h-full w-full">
-
-            <div class="flex flex-col flex-1 p-7 ">
-            <h1><span class="text-green">Android</span> Development</h1>
-            <p>Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.</p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CodeLabs <span class="button">-></span></button>
-            </div>
-            <div class="flex-2"><img src="./components/VwDf 1.png" alt="" srcset=""></div>
-        </div>
-
-
-        <div class="flex flex-row space-x-4 m-8 bg-slate-700 h-full w-full">
-
-            <div class="flex-2"><img src="./components/VwDf 1.png" alt="" srcset=""></div>
-            <div class="flex flex-col flex-1 p-7 ">
-                <h1><span class="text-green">Android</span> Development</h1>
-                <p>Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.</p>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CodeLabs <span class="button">-></span></button>
-            </div>
-        </div>
-            
-        <!-- this is opp side img -->
-        <div class="flex flex-row space-x-4 m-8 bg-slate-700 h-full w-full">
-
-            <div class="flex flex-col flex-1 p-7 ">
-            <h1><span class="text-green">Android</span> Development</h1>
-            <p>Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.</p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CodeLabs <span class="button">-></span></button>
-            </div>
-            <div class="flex-2"><img src="./components/VwDf 1.png" alt="" srcset=""></div>
-        </div>
-            
     </div>
-        
-    </div>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            themeIcon.innerHTML = document.body.classList.contains('dark') ? 
+            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-5.657l-.707.707M5.514 5.514l-.707.707M21 12h-1m-16 0H3m16.243 6.657l-.707.707M5.514 18.485l-.707.707M16.243 5.343l-.707.707M18.485 12l.707-.707" />` : 
+            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-5.657l-.707.707M5.514 5.514l-.707.707M21 12h-1m-16 0H3m16.243 6.657l-.707.707M5.514 18.485l-.707.707M16.243 5.343l-.707.707M18.485 12l.707-.707" />`;
+        });
+    </script>
 </body>
-
 </html>
