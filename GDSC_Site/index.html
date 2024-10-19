@@ -47,7 +47,7 @@
     <!-- hero section of the site -->
 
     <div class="hero pt-16 z-0 block">
-        <div class=" h-full w-full bg-cover bg-center" style="background-image: url('./components/Group\ 306.png');">
+        <div class="absolute h-full w-full bg-cover bg-center" style="background-image: url('./components/Group\ 306.png');">
             <div class=" inset-0 bg-black opacity-20 z-0"></div> <!-- Optional overlay -->
             <div class="flex items-center justify-center h-full z-0">
                 <div class="text-white text-center px-4">
@@ -120,34 +120,4 @@
     </div>
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    const toggleButton = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-
-        // Change the icon based on the theme
-        if (document.body.classList.contains('dark')) {
-            themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-5.657l-.707.707M5.514 5.514l-.707.707M21 12h-1m-16 0H3m16.243 6.657l-.707.707M5.514 18.485l-.707.707M16.243 5.343l-.707.707M18.485 12l.707-.707" />`;
-        } else {
-            themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-5.657l-.707.707M5.514 5.514l-.707.707M21 12h-1m-16 0H3m16.243 6.657l-.707.707M5.514 18.485l-.707.707M16.243 5.343l-.707.707M18.485 12l.707-.707" />`;
-        }
-    });
-</script>
 </html>
